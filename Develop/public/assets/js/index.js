@@ -4,6 +4,9 @@ var $saveNoteBtn = $(".save-note");
 var $newNoteBtn = $(".new-note");
 var $noteList = $(".list-container .list-group");
 
+
+
+
 // activeNote is used to keep track of the note in the textarea
 var activeNote = {};
 
@@ -138,7 +141,23 @@ $newNoteBtn.on("click", handleNewNoteView);
 $noteList.on("click", ".delete-note", handleNoteDelete);
 $noteTitle.on("keyup", handleRenderSaveBtn);
 $noteText.on("keyup", handleRenderSaveBtn);
-$get
+
 
 // Gets and renders the initial list of notes
 getAndRenderNotes();
+
+// note taker app should:
+// allow a user to come to my app and input some notes.
+// once he/she saves the notes using the save button in the top right
+// he/she should be able to revisit the same url or page, and see his notes after clicking the save button.
+
+//he/she should also be allowed to delete the note by using the trashcan at the top right
+// once updates are made notewise, the page should be able to refresh and have the notes remain.
+
+//connect the index.htmk to the notes.html
+// GET `/api/notes` - Should read the `db.json` file and return all saved notes as JSON.
+//`POST` SHOULD SAVE NOTES
+//`DELETE` SHOULD REMOVE NOTES
+
+//save note written into the package the json
+//when deleting the note it queries the package.json and looks for the spefic id and deletes the note 
